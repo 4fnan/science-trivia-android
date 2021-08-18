@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/questionsView">
+    <fragment
+        android:id="@+id/questionsView"
+        android:name="com.afnan.sciencetrivia.QuestionsView"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_questions" >
+        <action
+            android:id="@+id/action_questionsView_to_gameOver"
+            app:destination="@id/gameOver" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOver"
+        android:name="com.afnan.sciencetrivia.GameOver"
+        android:label="fragment_gameover"
+        tools:layout="@layout/fragment_gameover" >
+        <action
+            android:id="@+id/action_gameOver_to_questionsView"
+            app:destination="@id/questionsView" />
+    </fragment>
+</navigation>
